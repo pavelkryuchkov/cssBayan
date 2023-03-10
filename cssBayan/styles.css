@@ -1,0 +1,57 @@
+body {
+  overflow-y: scroll;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-wrapper {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.accordion__radio {
+  display: none;
+}
+
+.accordion__label {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #cccccc;
+}
+
+.accordion__icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(./images/expand-arrow.png) center/cover;
+  transition: all 0.3s;
+}
+
+.accordion__radio:checked ~ .accordion__header > .accordion__icon,
+.accordion__item:hover .accordion__icon {
+  /* background: url(./images/collapse-arrow.png) center/cover; */
+  transform: rotate(180deg);
+}
+
+.accordion__meme {
+  display: inline-block;
+  margin: 0 auto;
+  max-height: 0;
+  max-width: 0;
+  transition: all 0.3s;
+}
+
+.accordion__radio:checked ~ .accordion__meme,
+.accordion__item:hover .accordion__meme {
+  max-height: 100vh;
+  max-width: 500px;
+  margin: 2rem auto;
+}
