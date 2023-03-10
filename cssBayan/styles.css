@@ -1,12 +1,20 @@
 body {
+  margin: 0;
   overflow-y: scroll;
-  font-family: 'Poppins', sans-serif;
   font-family: 'Montserrat', sans-serif;
 }
 
 .page-wrapper {
   max-width: 50%;
   margin: 0 auto;
+}
+
+.accordion__item {
+  transition: all 0.1s;
+}
+
+.accordion__item:active {
+  transform: scale(1.05);
 }
 
 .accordion__radio {
@@ -23,8 +31,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   border-bottom: 1px solid #cccccc;
+}
+
+.accordion__meme-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.accordion__radio:checked ~ .accordion__header > .accordion__meme-name,
+.accordion:hover .accordion__meme-name {
+  opacity: 1;
+}
+
+.accordion__item:active .accordion__header > .accordion__meme-name {
+  opacity: 0.6;
 }
 
 .accordion__icon {
@@ -32,7 +56,12 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   background: url(./images/expand-arrow.png) center/cover;
+  opacity: 0;
   transition: all 0.3s;
+}
+
+.accordion:hover .accordion__icon {
+  opacity: 1;
 }
 
 .accordion__radio:checked ~ .accordion__header > .accordion__icon,
@@ -45,6 +74,7 @@ body {
   display: inline-block;
   margin: 0 auto;
   max-height: 0;
+  opacity: 0;
   max-width: 0;
   transition: all 0.3s;
 }
@@ -52,6 +82,12 @@ body {
 .accordion__radio:checked ~ .accordion__meme,
 .accordion__item:hover .accordion__meme {
   max-height: 100vh;
-  max-width: 500px;
+  max-width: 70%;
   margin: 2rem auto;
+  opacity: 1;
+}
+
+.accordion__item:active .accordion__meme {
+  opacity: 0.6;
+  transition-duration: 0.1s;
 }
