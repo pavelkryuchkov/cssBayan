@@ -5,7 +5,7 @@ body {
 }
 
 .page-wrapper {
-  max-width: 50%;
+  max-width: min(50rem, 50%);
   margin: 0 auto;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 .accordion__item:active {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .accordion__radio {
@@ -38,17 +38,20 @@ body {
 .accordion__meme-name {
   font-size: 1.2rem;
   font-weight: 600;
-  opacity: 0.6;
+  color: #4b86b4;
+  opacity: 0.5;
   transition: all 0.3s;
 }
 
 .accordion__radio:checked ~ .accordion__header > .accordion__meme-name,
 .accordion:hover .accordion__meme-name {
+  color: initial;
   opacity: 1;
 }
 
 .accordion__item:active .accordion__header > .accordion__meme-name {
-  opacity: 0.6;
+  color: #4b86b4;
+  opacity: 0.5;
 }
 
 .accordion__icon {
@@ -66,7 +69,6 @@ body {
 
 .accordion__radio:checked ~ .accordion__header > .accordion__icon,
 .accordion__item:hover .accordion__icon {
-  /* background: url(./images/collapse-arrow.png) center/cover; */
   transform: rotate(180deg);
 }
 
@@ -81,8 +83,8 @@ body {
 
 .accordion__radio:checked ~ .accordion__meme,
 .accordion__item:hover .accordion__meme {
-  max-height: 100vh;
   max-width: 70%;
+  max-height: 22rem;
   margin: 2rem auto;
   opacity: 1;
 }
