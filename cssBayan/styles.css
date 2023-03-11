@@ -9,21 +9,21 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   .page-wrapper {
     max-width: 70%;
     margin: 0 auto;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   .page-wrapper {
     max-width: 55%;
     margin: 0 auto;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .page-wrapper {
     max-width: min(45rem, 50%);
     margin: 0 auto;
@@ -34,13 +34,13 @@ body {
   font-size: 1.4rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   .page-heading {
     font-size: 1.7rem;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .page-heading {
     font-size: 2rem;
   }
@@ -69,7 +69,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.7rem;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 0.0625rem solid #cccccc;
 }
 
 .accordion__meme-name {
@@ -90,7 +90,7 @@ body {
   opacity: 0.7;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   .accordion__header {
     padding: 0.8rem;
   }
@@ -100,7 +100,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .accordion__header {
     padding: 1rem;
   }
@@ -128,7 +128,7 @@ body {
   transform: rotate(180deg);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .accordion__icon {
     width: 1.1rem;
     height: 1.1rem;
@@ -163,7 +163,7 @@ body {
   transition-duration: 0.1s;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   .accordion__radio:checked ~ .accordion__meme {
     max-width: 80%;
     max-height: 18rem;
@@ -171,7 +171,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .accordion__radio:checked ~ .accordion__meme,
   .accordion__item:hover .accordion__meme {
     max-width: 70%;
