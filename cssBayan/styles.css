@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  overflow-y: scroll;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 31.25rem) {
+  .page-wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 50rem) {
+  .page-wrapper {
+    max-width: 55%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 75rem) {
+  .page-wrapper {
+    max-width: min(45rem, 50%);
+    margin: 0 auto;
+  }
+}
+
+.page-heading {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 50rem) {
+  .page-heading {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .page-heading {
+    font-size: 2rem;
+  }
+}
+
+.accordion__item {
+  transition: all 0.1s;
+}
+
+.accordion__item:active {
+  transform: scale(1.03);
+}
+
+.accordion__radio {
+  display: none;
+}
+
+.accordion__label {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+  border-bottom: 0.0625rem solid #cccccc;
+}
+
+.accordion__meme-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b86b4;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.accordion__radio:checked ~ .accordion__header > .accordion__meme-name {
+  color: initial;
+  opacity: 1;
+}
+
+.accordion__item:active .accordion__header > .accordion__meme-name {
+  color: #4b86b4;
+  opacity: 0.7;
+}
+
+@media (min-width: 50rem) {
+  .accordion__header {
+    padding: 0.8rem;
+  }
+
+  .accordion__meme-name {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .accordion__header {
+    padding: 1rem;
+  }
+
+  .accordion__meme-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (hover: hover) {
+  .accordion:hover .accordion__meme-name {
+    color: initial;
+    opacity: 1;
+  }
+}
+
+.accordion__icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(./images/expand-arrow.png) center/cover;
+  /* opacity: 0; */
+  transition: all 0.3s;
+}
+
+.accordion__radio:checked ~ .accordion__header > .accordion__icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 75rem) {
+  .accordion__icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) {
+  .accordion:hover .accordion__icon {
+    opacity: 1;
+  }
+  .accordion__item:hover .accordion__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.accordion__meme {
+  display: inline-block;
+  margin: 0 auto;
+  max-height: 0;
+  opacity: 0;
+  max-width: 0;
+  transition: all 0.3s;
+}
+
+.accordion__radio:checked ~ .accordion__meme {
+  max-width: 80%;
+  max-height: 15rem;
+  margin: 1rem auto;
+  opacity: 1;
+}
+
+@media (min-width: 50rem) {
+  .accordion__radio:checked ~ .accordion__meme {
+    max-width: 80%;
+    max-height: 18rem;
+    margin: 1.5rem auto;
+  }
+}
+
+@media (min-width: 75rem) {
+  .accordion__radio:checked ~ .accordion__meme {
+    max-width: 70%;
+    max-height: 22rem;
+    margin: 2rem auto;
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  .accordion__item:hover .accordion__meme {
+    max-width: 70%;
+    max-height: 22rem;
+    margin: 2rem auto;
+    opacity: 1;
+  }
+}
+
+.accordion__item:active .accordion__meme {
+  opacity: 0.6;
+  transition-duration: 0.1s;
+}
